@@ -22,3 +22,9 @@ Run the project
 ```powershell
     mkdocs serve
 ```
+
+## Resources
+
+[Mkdocs documentation](https://www.mkdocs.org/)
+<br>
+[Mkdocs Material documentation](https://squidfunk.github.io/mkdocs-material/getting-started/)
