@@ -54,5 +54,5 @@ stages:
       inputs:
         app_location: "/"
         api_location: ""
-        output_location: "dist"
+        output_location: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip"
         azure_static_web_apps_api_token: '1a3c484ffd692a55bbe63311134d39a864d92532610b4b19ab6d93fd6af94a5f2-9d8b7ac9-b749-4195-98bc-6ec9e30fa226010148872'
