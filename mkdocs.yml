@@ -1,18 +1,51 @@
-site_name: CypherCrescent Documentation
+site_name: Best Practices
+site_url: https://adeola-aderibigbe.github.io/Documentations
+
 nav:
-    - Home: index.md
+    - Home: 'index.md'
     - 'Documentations':
         - Azure:
           - Azure app service configuration .NET app : azureappconfiguration.md
+    - 'Blogs': 
+        - blog/index.md
 
+       
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
 
+
+plugins:
+  - blog:
+     blog_dir: blog
+     blog_toc: true
+     post_dir: "{blog}/posts"
+     post_date_format: full
+     post_url_format: "{date}/{slug}"
+     archive: false
+     categories: true
+     authors: true
+  - social
+repo_name: Best Practices 
+repo_url: https://github.com/Adeola-Aderibigbe/Documentations
+
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/Adeola-Aderibigbe/Documentations
+  generator: false
+copyright: Copyright &copy; 2023 CypherCrescent
+edit_uri: edit/main/docs/
 theme: 
   name: material
+  favicon: img/cyphercrescentLogo.jpg
+  logo: img/cyphercrescentLogo.svg
   icon:
+    repo: fontawesome/brands/github
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+    
     admonition:
       note: octicons/tag-16
       abstract: octicons/checklist-16
@@ -26,14 +59,19 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
+      edit: material/pencil 
+      view: material/eye
+      
+  features:
+    - navigation.footer
+    - content.action.edit
+    - content.action.view
   palette: 
-
     - scheme: default
       toggle:
-        icon: material/brightness-7 
+        icon: material/weather-night
         name: Switch to dark mode
-
     - scheme: slate
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: Switch to light mode
