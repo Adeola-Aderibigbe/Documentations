@@ -20,7 +20,12 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material 
-      - run: sudo apt-get update && sudo apt-get upgrade
+      - name : update pwsh
+        run: |
+         sudo apt-get update
+         sudo apt-get upgrade
+         sudo snap remove powershell
+         sudo apt-get install powershell
       - run: apt-get install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
       - run: pip install "mkdocs-material[imaging]"
       - run: mkdocs gh-deploy --force
